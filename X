@@ -1,0 +1,15 @@
+import random
+
+def generate_random_number():
+    return random.randint(1, 100)
+
+def check_even_odd(number):
+    if number % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+
+random_number = generate_random_number()
+result = check_even_odd(random_number)
+
+print(f"The randomly generated number is {random_number}, and it is {result}.")
