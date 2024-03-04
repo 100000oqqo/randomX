@@ -1,0 +1,14 @@
+import keyboard
+
+def delete_key_on_press(key):
+    # Specify the key you want to delete
+    target_key = "delete"
+
+    if key.name == target_key:
+        keyboard.press_and_release("backspace")  # Simulate backspace key press
+
+# Set up the hook to call delete_key_on_press function on each key press
+keyboard.hook(delete_key_on_press)
+
+# Block the script from exiting
+keyboard.wait("esc")  # Wait for the 'esc' key to be pressed
